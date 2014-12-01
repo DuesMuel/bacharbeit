@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http//www.w3.org/TR/xhtml/DTD/xhtml-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+	<h:form>
+
+		<h:messages style="color:red" />
+
+
+		<h:outputLabel id="firstNameOutputId" value="Firstname: " />
+		<h:inputText id="firstNameInputId"
+			value="#{userRegistration.firstName}" required="true"
+			requiredMessage ="#{vm['userRegistration.firstName.required']}" />
+		<h:message for="firstNameInputId" style="color:red" />
+		<br/>
+
+		<h:outputLabel id="lastNameOutputId" value="Lastname: " />
+		<h:inputText id="lastNameInputId" value="#{userRegistration.lastName}"
+			required="true" requiredMessage ="#{vm['userRegistration.lastName.required']}" />
+		<h:message for="lastNameInputId" style="color:red" />
+		<br/>
+
+		<h:outputLabel id="matrikelNumberOutputId" value="Matrikelnumber: " />
+		<h:inputText id="matrikelNumberInputId"
+			value="#{userRegistration.matrikelNumber}" required="true"
+			requiredMessage ="#{vm['userRegistration.matrikelNumber.required']}" />
+		<h:message for="matrikelNumberInputId" style="color:red"  />
+		<br/>
+
+		<h:commandButton id="userRegistrationCmdBtnId" value="REGISTER"
+			action="#{userRegistration.processRegistration}" />
+	</h:form>
+</h:body>
+</html>
