@@ -10,7 +10,7 @@ public interface IDatabaseService {
 
 	public  User updateUser(User user);
 	
-	public User getUser(User user);
+	public User getUser(User user) throws Exception;
 	
 	
 }
